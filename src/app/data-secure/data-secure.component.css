@@ -1,0 +1,23 @@
+.DataSecure {
+    background-color: aquamarine;
+}
+
+
+.Header {
+    size: 24px;
+    margin: 5;
+    text-align: left;
+    font-weight: bold;
+}
+
+.subHeader
+{
+    size: 18px;
+    font-weight: bold;
+}
+
+.content
+{
+    size: 18px;
+    font-weight: lighter;
+}
