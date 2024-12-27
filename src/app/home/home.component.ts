@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IEmissionValue } from '../emission-value/emission-value.Model';
 import { EmissionValueComponent } from '../emission-value/emission-value.component';
+import { DOCUMENT } from '@angular/common';
+import { Inject } from '@angular/core';
 
 @Component({
   selector: 'env-home',
@@ -8,7 +10,13 @@ import { EmissionValueComponent } from '../emission-value/emission-value.compone
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  isRTL: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  ngOnInit(): void {
+    // Get the writing direction from the document
+    this.isRTL = this.document.dir === 'rtl' || 
+                 window.getComputedStyle(this.document.body).direction === 'rtl';
+  }
 }

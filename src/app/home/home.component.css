@@ -1,12 +1,82 @@
 .container {
     display: flex;
-    flex-direction: column;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
-  }
+    padding: 20px;
+    gap: 40px;
+}
 
-  .hero {
+.menu-container {
+    width: 200px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.rtl .menu-container {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.rtl .local-menu a:hover {
+    transform: translateX(-5px);
+}
+
+.local-menu {
+    position: sticky;
+    top: 100px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-header {
+    color: rgb(117, 172, 118);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(117, 172, 118);
+}
+
+.local-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.local-menu li {
+    margin: 10px 0;
+}
+
+.local-menu a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.local-menu a:hover {
+    color: rgb(117, 172, 118);
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+}
+
+.content-container {
+    flex: 1;
+    min-width: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero {
     background-image: url("/assets/Images/hero-banner.png");
     background-repeat: no-repeat;
     height: 300px;
@@ -14,10 +84,11 @@
     background-position: center;
     text-align: center;
     margin-bottom: 40px;
-  }
+    border-radius: 8px;
+    scroll-margin-top: 100px;
+}
 
-
-  .slogan {
+.slogan {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,31 +96,92 @@
     margin-bottom: 40px;
     border-top: 2px solid #888;
     border-bottom: 2px solid #888;
-    padding: 10px 150px 10px 150px;
-  }
+    padding: 10px 150px;
+    scroll-margin-top: 100px;
+}
 
-  .slogan img {
+.slogan img {
     width: auto;
     height: 60px;
-  }
+}
 
-  .slogan-text {
+.slogan-text {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 40px 0 40px 0;
+    margin: 40px 0;
     text-align: center;
-  }
-  
-  .slogan-main-text {
+}
+
+.slogan-main-text {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-  }
+}
 
-  .slogan-sub-text {
+.slogan-sub-text {
     font-size: 20px;
     color: #666;
     text-align: center;
-  }
+}
+
+#emissions, #info {
+    scroll-margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+        max-width: 800px;
+    }
+
+    .menu-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .rtl .menu-container {
+        margin-left: 0;
+    }
+
+    .local-menu {
+        position: relative;
+        top: 0;
+    }
+
+    .local-menu a:hover,
+    .rtl .local-menu a:hover {
+        transform: none;
+    }
+
+    .content-container {
+        max-width: 100%;
+    }
+
+    .slogan {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slogan {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .slogan img {
+        height: 40px;
+    }
+
+    .slogan-main-text {
+        font-size: 20px;
+    }
+
+    .slogan-sub-text {
+        font-size: 16px;
+    }
+}
