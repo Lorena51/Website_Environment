@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-header.component.css']
 })
 export class SideHeaderComponent {
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

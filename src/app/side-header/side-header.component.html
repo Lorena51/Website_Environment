@@ -1,15 +1,26 @@
 <div class="container">
     <div class="left">
-      <a routerLink="/home" class="logo-link">
-        <img class="logo" src="/assets/Images/Logo_Website.jpg" alt="Environment Logo - Home" />
-      </a>
-      <a routerLink="/DataSecure">Catalog</a>
-      <div class="cart">
-        <a routerLink="/Impressum">Cart</a>
-      </div>
+        <a routerLink="/home" class="logo-link">
+            <img class="logo" src="/assets/Images/Logo_Website.jpg" alt="Environment Logo - Home" />
+        </a>
+        <nav class="desktop-nav">
+            <a routerLink="/DataSecure">Events</a>
+            <a routerLink="/Impressum">More Information</a>
+        </nav>
     </div>
-    <div class="right">
-      <a href="">Sign In</a>
-      <a href="" class="cta">Register</a>
+    <div class="right">        
+        <button class="menu-toggle" (click)="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </div>
+</div>
+
+<div class="mobile-menu" [class.active]="isMenuOpen">
+    <nav>
+        <a routerLink="/DataSecure">Events</a>
+        <a routerLink="/Impressum">More Information</a>
+       
+    </nav>
 </div>

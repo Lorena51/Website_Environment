@@ -41,16 +41,21 @@
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(117, 172, 118);
+    display: block;
 }
 
 .local-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .local-menu li {
-    margin: 10px 0;
+    margin: 0;
+    width: 100%;
 }
 
 .local-menu a {
@@ -61,6 +66,8 @@
     display: block;
     padding: 8px 12px;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .local-menu a:hover {
@@ -74,6 +81,7 @@
     min-width: 0;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .hero {
@@ -86,6 +94,8 @@
     margin-bottom: 40px;
     border-radius: 8px;
     scroll-margin-top: 100px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .slogan {
@@ -131,17 +141,16 @@
     margin-bottom: 40px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
         padding: 10px;
-        max-width: 800px;
+        gap: 20px;
     }
 
     .menu-container {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 20px;
     }
 
     .rtl .menu-container {
@@ -151,17 +160,48 @@
     .local-menu {
         position: relative;
         top: 0;
+        margin-top: 80px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .menu-header {
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .local-menu a:hover,
     .rtl .local-menu a:hover {
         transform: none;
+        background-color: rgb(117, 172, 118);
+        color: white;
     }
 
     .content-container {
         max-width: 100%;
+        padding: 10px;
     }
 
+    .hero {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .local-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .local-menu a {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 1024px) {
     .slogan {
         padding: 10px 20px;
     }
