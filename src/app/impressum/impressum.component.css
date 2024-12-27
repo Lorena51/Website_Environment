@@ -1,0 +1,55 @@
+.impressum-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: rgb(117, 172, 118);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(117, 172, 118);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: rgb(117, 172, 118);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 8px 0;
+    line-height: 1.5;
+    color: #444;
+}
+
+a {
+    color: rgb(117, 172, 118);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #4a7c59;
+    text-decoration: underline;
+}
+
+.dispute-resolution, .dispute-notice {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .impressum-container {
+        margin: 20px;
+        padding: 15px;
+    }
+}
