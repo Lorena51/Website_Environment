@@ -10,6 +10,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { DataSecureComponent } from './data-secure/data-secure.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmissionValueComponent } from './emission-value/emission-value.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EmissionValueComponent } from './emission-value/emission-value.componen
     FooterComponent,
     ImpressumComponent,
     DataSecureComponent,
-    EmissionValueComponent
+    EmissionValueComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
