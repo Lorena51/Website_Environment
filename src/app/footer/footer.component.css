@@ -1,7 +1,19 @@
-.Footer{
-    background-color: darkslategrey;
-    color: beige;
-    height: 50px;
-    
-    /* Set To bottom */
+.Footer {
+    background-color: #ddecdf;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+}
+
+.Footer div {
+    cursor: pointer;
+    color: #444;
+}
+
+.Footer div:hover {
+    color: #000;
+    text-decoration: underline;
 }

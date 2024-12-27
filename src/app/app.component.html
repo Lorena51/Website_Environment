@@ -1,5 +1,9 @@
-<env-side-header></env-side-header>
-<!-- <app-home></app-home> -->
- <router-outlet></router-outlet> 
-<!-- <app-footer></app-footer> -->
-
+<div class="app-container">
+    <header>
+        <env-side-header></env-side-header>
+    </header>
+    <main class="content">
+        <router-outlet></router-outlet>
+    </main>
+    <env-footer></env-footer>
+</div>
