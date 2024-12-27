@@ -5,6 +5,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { DataSecureComponent } from './data-secure/data-secure.component';
 
 
+
+
 const routes: Routes = [
   {path: 'home', component: HomeComponent, title: "Home - Enviroment"},
   {path: 'Impressum', component: ImpressumComponent, title: "Impressum"},

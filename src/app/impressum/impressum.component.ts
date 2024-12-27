@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-impressum',
+  selector: 'env-impressum',
   templateUrl: './impressum.component.html',
   styleUrls: ['./impressum.component.css']
 })

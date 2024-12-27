@@ -1,0 +1,32 @@
+.grid-container {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+  padding-bottom: 10px;
+}
+
+ag-grid-angular {
+  width: 100%;
+  height: 600px; /* Fixed height for the grid */
+}
+::ng-deep .ag-theme-alpine .ag-header {
+  background: none;
+  border: none;
+}
+
+::ng-deep .ag-theme-alpine .ag-header-cell {
+  background: none;
+}
+
+::ng-deep .ag-theme-alpine .ag-header-row {
+  background: none;
+}

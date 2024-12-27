@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-data-secure',
+  selector: 'env-data-secure',
   templateUrl: './data-secure.component.html',
   styleUrls: ['./data-secure.component.css']
 })
