@@ -10,15 +10,7 @@ import emissionData from './csvjson.json';
 })
 export class EmissionValueComponent implements OnInit {
   emissionValues: IEmissionValue[] = [];
-
-  textFormatter = (from: string): string | string => {
-    if (from) {
-      // Regular expression to remove HTML tags
-      return from.replace(/<\/?[^>]+(>|$)/g, "").trim();
-    }
-    return "";
-  };
-
+ 
   columnDefs: ColDef[] = [
     { 
       field: 'name', 
@@ -50,13 +42,11 @@ export class EmissionValueComponent implements OnInit {
     }
   ];
 
-    // Function to remove HTML tags from a string
-    removeHtmlTags(input: string): string {
-      if (!input) return '';
-      return input.replace(/<\/?[^>]+(>|$)/g, "").trim(); // Regex to remove HTML tags
-    }
+  removeHtmlTags(input: string): string {
+    if (!input) return '';
+    return input.replace(/<\/?[^>]+(>|$)/g, "").trim(); // Regex to remove HTML tags
+  }
 
-  // Custom Filter Params for agTextColumnFilter
   customFilterParams = {
     // Override the text filter's filter function
     filter: (filterValue: string, cellValue: string) => {
@@ -68,7 +58,7 @@ export class EmissionValueComponent implements OnInit {
 
   defaultColDef: ColDef = {
     resizable: true,
-    floatingFilter: true,
+    floatingFilter: false,
     sortable: true, 
     filterParams: this.customFilterParams, // Use custom filter params
   };
@@ -82,7 +72,6 @@ export class EmissionValueComponent implements OnInit {
   };
 
   ngOnInit() {
-    // Sanitize data before setting it
     this.emissionValues = emissionData.map(item => ({
       jahr: item.jahr,
       name: this.removeHtmlTags(item.name),
@@ -90,6 +79,4 @@ export class EmissionValueComponent implements OnInit {
       co2: item.co2,
     }));
   }
-
-
 }
