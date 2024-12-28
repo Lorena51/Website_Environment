@@ -81,8 +81,11 @@
     min-width: 0;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px;    
+    size: 18px;
+    font-weight: lighter;
 }
+
 
 .hero {
     background-image: url("/assets/Images/hero-banner.png");
@@ -136,6 +139,16 @@
     text-align: center;
 }
 
+.Further-Informations{
+ size: 18px;
+
+ font-weight: lighter;
+ margin: 10px 0;
+ line-height: 1.6;
+ color: #444;
+
+}
+
 #emissions, #info {
     scroll-margin-top: 100px;
     margin-bottom: 40px;
@@ -186,6 +199,8 @@
     .hero {
         margin-top: 0;
     }
+
+    
 }
 
 @media (max-width: 480px) {
