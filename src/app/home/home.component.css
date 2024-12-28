@@ -97,7 +97,7 @@
     margin-bottom: 40px;
     border-radius: 8px;
     scroll-margin-top: 100px;
-    margin-top: 20px;
+    margin-top: 30px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -116,6 +116,8 @@
 .slogan img {
     width: auto;
     height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .slogan-text {
@@ -140,11 +142,20 @@
 }
 
 .Further-Informations{
- size: 18px;
+    size: 18px;
 
- font-weight: lighter;
- margin: 10px 0;
- line-height: 1.6;
+    font-weight: lighter;
+    margin: 10px ;
+    line-height: 1.6;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;   
+    text-align: left;
+    margin-bottom: 40px;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;    
+    scroll-margin-top: 100px;
 
 }
 
@@ -198,7 +209,9 @@
     .hero {
         margin-top: 0;
     }
-
+    .Further-Informations{
+        margin: 0;
+    }
     
 }
 
@@ -213,12 +226,16 @@
         width: 100%;
         box-sizing: border-box;
     }
+    .Further-Informations{
+        margin: 0;
+    }
 }
 
 @media (max-width: 1024px) {
     .slogan {
         padding: 10px 20px;
     }
+    
 }
 
 @media (max-width: 600px) {
@@ -236,6 +253,11 @@
     }
 
     .slogan-sub-text {
+        font-size: 16px;
+    }
+    .Further-Informations{
+        flex-direction: column;
+        gap: 15px;
         font-size: 16px;
     }
 }
