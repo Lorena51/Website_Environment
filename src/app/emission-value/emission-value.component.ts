@@ -54,7 +54,7 @@ export class EmissionValueComponent implements OnInit {
   gridOptions: GridOptions = {
     rowHeight: 48,
     headerHeight: 48,
-    suppressMovableColumns: true,
+    suppressMovableColumns: false,
     enableCellTextSelection: true,
     pagination: false // Disable pagination to show scrollbar
   };
