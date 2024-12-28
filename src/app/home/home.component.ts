@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmissionValue } from '../emission-value/emission-value.Model';
-import { EmissionValueComponent } from '../emission-value/emission-value.component';
 import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
 

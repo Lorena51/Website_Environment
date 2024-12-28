@@ -141,10 +141,7 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 10px 15px;
-    }
-
+  
     .logo {
         height: 40px;
     }

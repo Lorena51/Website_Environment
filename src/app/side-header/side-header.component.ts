@@ -9,6 +9,6 @@ export class SideHeaderComponent {
   isMenuOpen = false;
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+     this.isMenuOpen = !this.isMenuOpen;
   }
 }
