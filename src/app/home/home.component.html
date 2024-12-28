@@ -3,18 +3,18 @@
         <nav class="local-menu">
             <div class="menu-header">Navigation</div>
             <ul>
-                <li><a href="hero">Home</a></li>
-                <li><a href="slogan">About Us</a></li>
-                <li><a href="emissions">Emission Values</a></li>
-                <li><a href="info">Further Information</a></li>
+                <li><a (click)="scrollToSection('hero', $event)">Home</a></li>
+                <li><a (click)="scrollToSection('slogan', $event)">About Us</a></li>
+                <li><a (click)="scrollToSection('emissions', $event)">Emission Values</a></li>
+                <li><a (click)="scrollToSection('info', $event)">Further Information</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="content-container">
-        <div id="hero" class="hero"></div>
+        <section id="hero" class="hero"></section>
 
-        <div id="slogan" class="slogan">
+        <section id="slogan" class="slogan">
             <img src="/assets/Images/Logo small.jpg" alt="Step" />
             <div class="slogan-text">
               <div class="slogan-main-text">Environment facts & steps</div>
@@ -25,17 +25,17 @@
               </div>
             </div>
             <img src="/assets/Images/Logo small.jpg" alt="Step" />
-        </div>
+        </section>
 
-        <div id="emissions" class="Information Table">
+        <section id="emissions" class="Information Table">
             <env-emission-value></env-emission-value>
-        </div>
+        </section>
         
-        <div id="info" class="Further-Informations">
+        <section id="info" class="Further-Informations">
             <p>
                 Emissions are rapidly changing our planet, impacting ecosystems, weather patterns, and human health. Rising greenhouse gas levels contribute to global warming, causing extreme weather events, rising sea levels, and biodiversity loss. The future of our environment depends on collective action to reduce emissions and create a sustainable future for all.
                 
                 Stay informed about the latest developments and learn how you can make a difference. Explore our upcoming events and gain valuable insights into the fight against climate change. Together, we can help protect the world for generations to come.</p>
-        </div>
+        </section>
     </div>
 </div>

@@ -19,4 +19,15 @@ export class HomeComponent implements OnInit {
     this.isRTL = this.document.dir === 'rtl' || 
                  window.getComputedStyle(this.document.body).direction === 'rtl';
   }
+
+  scrollToSection(sectionId: string, event: Event): void {
+    event.preventDefault();
+    const element = this.document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }
