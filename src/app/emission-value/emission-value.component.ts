@@ -58,7 +58,7 @@ export class EmissionValueComponent implements OnInit {
 
   defaultColDef: ColDef = {
     resizable: true,
-    floatingFilter: false,
+    floatingFilter: true,
     sortable: true, 
     filterParams: this.customFilterParams, // Use custom filter params
   };
